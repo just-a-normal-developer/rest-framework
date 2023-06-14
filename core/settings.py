@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
 
     #project app
-    'users'
+    'users.apps.UsersConfig',
+    'accounts.apps.AccountsConfig'
 
 ]
 
