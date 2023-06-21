@@ -10,7 +10,8 @@ from rest_framework.permissions import IsAuthenticated , IsAdminUser
 from rest_framework import status
 
 class Home(APIView):
-    permission_classes = [IsAdminUser]
+    permission_classes = [IsAuthenticated]
+    serializer_class = UserNamesSerializer
     def get(self , request):
 
         persons = models.UserNames.objects.all()
@@ -24,7 +25,6 @@ class Home(APIView):
 
 
 class QuestionListView(APIView):
-
     def get(self , request):
         questions = models.Question.objects.all()
         srz_data = QuestionSerializer(instance = questions , many = True)
@@ -48,7 +48,6 @@ class QuestionUpdateView(APIView):
         return Response(srz_data.errors , status = status.HTTP_400_BAD_REQUEST)
 
 class QuestionDeleteView(APIView):
-
     def delete(self, request , pk):
         question = models.Question.objects.get( pk = pk)
         question.delete()
