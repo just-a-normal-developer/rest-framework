@@ -4,7 +4,7 @@ from .models import UserNames , Question , Answer
 class UserNamesSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserNames
-        fields = ['id', 'username', 'email', 'description', 'passw']
+        fields = ['id', 'username', 'email', 'description', 'passw',]
 
 class QuestionSerializer(serializers.ModelSerializer):
     answer = serializers.SerializerMethodField()
@@ -12,7 +12,7 @@ class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
         fields = '__all__'
-
+#the comment is nedded here
     def get_answer(self , object):
         result = object.qanswers.all()
         return AnswerSerializer(instance = result , many = True).data
