@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework.decorators import api_view
+from django.http.response import HttpResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from . import models
@@ -52,3 +53,7 @@ class QuestionDeleteView(APIView):
         question = models.Question.objects.get( pk = pk)
         question.delete()
         return Response({'message' :'deleted successfully' } , status=status.HTTP_200_OK)
+
+
+def Hello(request):
+    return HttpResponse("hello")
