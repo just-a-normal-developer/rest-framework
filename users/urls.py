@@ -9,6 +9,6 @@ urlpatterns = [
     path('questions/create/', views.QuestionCreateView.as_view(), name='question_create'),
     path('questions/update/<int:pk>/', views.QuestionUpdateView.as_view(), name='question_update'),
     path('questions/delete/<int:pk>/', views.QuestionDeleteView.as_view(), name='question_delete'),
-    path('up/' , views.Hello , name= 'just_hello')
+    path('update/' , views.Hello , name= 'just_hello1')
 
 ]
