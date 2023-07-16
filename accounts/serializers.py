@@ -8,6 +8,7 @@ def clean_email(value):
 
 
 class UserRegisterSerializer(serializers.ModelSerializer):
+    # we used model here for better and clean code
     password2 = serializers.CharField(write_only = True , required = True)
 
     class Meta:
