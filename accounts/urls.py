@@ -2,6 +2,8 @@ from django.urls import path
 from . import views
 from rest_framework.authtoken import views as auth_token
 
+#here the app name added beacause when you want to use the  name space in the core url then it is needed to have  the app name in the url part of your code
+
 app_name = 'accounts'
 
 urlpatterns = [
