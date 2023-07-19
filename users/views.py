@@ -29,8 +29,8 @@ class Home(APIView):
 class QuestionListView(APIView):
     def get(self , request):
         questions = models.Question.objects.all()
-        srz_data = QuestionSerializer(instance = questions , many = True)
-        return Response(srz_data.data , status= status.HTTP_200_OK )
+        srz_data = QuestionSerializer(instance = questions , many = True).data
+        return Response(srz_data , status= status.HTTP_200_OK )
 
 class QuestionCreateView(APIView):
     def post(self, request):
