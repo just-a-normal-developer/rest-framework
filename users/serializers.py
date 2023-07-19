@@ -12,7 +12,7 @@ class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
         fields = '__all__'
-#the comment is nedded here
+
     def get_answer(self , object):
         result = object.qanswers.all()
         return AnswerSerializer(instance = result , many = True).data
