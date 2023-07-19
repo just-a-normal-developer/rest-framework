@@ -22,7 +22,7 @@ class Home(APIView):
         # Logic for handling POST request
         return Response({"message": "Data received!"})
 
-
+#the apiview provide the functionality to the project that inheritence come for help
 
 class QuestionListView(APIView):
     def get(self , request):
