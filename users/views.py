@@ -22,9 +22,9 @@ class Home(APIView):
         # Logic for handling POST request
         return Response({"message": "Data received!"})
 
-#the apiview provide the functionality to the project that inheritence come for help
+#the api view provide the functionality to the project that inheritance come for help
 
-#actually here methods for api have been disccoupled beacause we can acces to change one if we want not the whole class
+#actually here methods for api have been decoupled because we can have access to change one if we want not the whole class
 
 class QuestionListView(APIView):
     def get(self , request):
