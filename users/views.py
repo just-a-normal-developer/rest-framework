@@ -24,6 +24,8 @@ class Home(APIView):
 
 #the apiview provide the functionality to the project that inheritence come for help
 
+#actually here methods for api have been disccoupled beacause we can acces to change one if we want not the whole class
+
 class QuestionListView(APIView):
     def get(self , request):
         questions = models.Question.objects.all()
