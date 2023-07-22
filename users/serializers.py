@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from .models import UserNames , Question , Answer
 
+# by modelserializer we want less code ore focus
+
 class UserNamesSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserNames

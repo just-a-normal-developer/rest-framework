@@ -37,6 +37,5 @@ class Answer(models.Model):
     body = models.TextField()
     creators = models.DateTimeField(auto_now_add = True)
 
-
     def __str__(self):
         return f'{self.user} - {self.question.title[:30]}'
