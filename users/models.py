@@ -17,6 +17,8 @@ class UserNames(models.Model):
 
 
 class Question(models.Model):
+    class Meta:
+        verbose_name_plural = 'questions'
     user = models.ForeignKey(User , on_delete=models.CASCADE , related_name='questions')
     title = models.CharField(max_length = 200)
     slug = models.SlugField(max_length=100)
