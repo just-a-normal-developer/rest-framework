@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
 
-    # project app
+    # project's app
     'users.apps.UsersConfig',
     'accounts.apps.AccountsConfig'
 
